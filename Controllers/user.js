@@ -2,13 +2,23 @@ import { ObjectId, ObjectID } from "bson";
 import { object } from "webidl-conversions";
 import User from "../models/user.js";
 
+export const allUsers = async (req, res) => {
+  try {
+    const users = await User.find({});
+
+    if (!users) return res.status(404).json({ message: "No User Found." });
+
+    return res.status(200).json({ users });
+  } catch (error) {}
+};
+
 export const createUser = async (req, res) => {
   const { email, name } = req.body;
 
   try {
     const existingUser = await User.findOne({ email });
     if (existingUser) {
-      return res.status(400).json({ message: "User already exists." });
+      return res.status(404).json({ message: "User already exists." });
     }
 
     const result = await User.create({

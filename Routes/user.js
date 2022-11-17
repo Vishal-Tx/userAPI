@@ -1,6 +1,7 @@
-import express from "express";
+import express, { application } from "express";
 
 import {
+  allUsers,
   createUser,
   transferAmount,
   checkBalance,
@@ -8,6 +9,7 @@ import {
 
 const router = express.Router();
 
+router.get("/", allUsers);
 router.post("/create", createUser);
 router.post("/transferAmount", transferAmount);
 router.post("/checkBalance", checkBalance);

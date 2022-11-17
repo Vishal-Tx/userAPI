@@ -1,8 +1,8 @@
 const user = [
   {
     _id: "637514af647b9e44cc57d5f9",
-    name: "test2",
-    email: "test2@123",
+    name: "Test User",
+    email: "abc1@gmail.com",
     coin: 100,
     __v: 0,
   },
@@ -262,5 +262,7 @@ export const userDocs = {
   "/user/checkBalance": {
     post: checkBalance,
   },
-  "/user/transferAmount": { post: transferAmount },
+  "/user/transferAmount": {
+    post: transferAmount,
+  },
 };

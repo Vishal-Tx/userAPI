@@ -1,3 +1,5 @@
+import { userDocs } from "./user_Docs.js";
+
 export const swaggerDocument = {
   openapi: "3.0.0",
   info: {
@@ -8,18 +10,13 @@ export const swaggerDocument = {
   },
   servers: [
     {
-      url: "http://localhost:3000/user",
+      url: "http://localhost:3000",
       description: "Base url",
     },
   ],
   tags: [{ name: "User", description: "All User routes" }],
 
   paths: {
-    "/create": {
-      post: {
-        summary: "Add a new user.",
-        tags: ["User"],
-      },
-    },
+    ...userDocs,
   },
 };

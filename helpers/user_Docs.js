@@ -1,8 +1,8 @@
 const user = [
   {
-    _id: "637514af647b9e44cc57d5f9",
+    _id: "63780073a9666656f1a58ca8",
     name: "Test User",
-    email: "abc1@gmail.com",
+    email: "abc@gmail.com",
     coin: 100,
     __v: 0,
   },
@@ -10,16 +10,16 @@ const user = [
 
 const amountTransferExample = {
   fromUser: {
-    _id: "637637b117851ede0717de9c",
-    name: "Test User",
-    email: "abc@123@gmail.com",
+    _id: "637800b4a9666656f1a58cb0",
+    name: "Test User3",
+    email: "abc3@gmail.com",
     coin: 95,
     __v: 0,
   },
   toUser: {
-    _id: "6376383e5bf74edd4d570a8f",
-    name: "Test User1",
-    email: "abc1@123@gmail.com",
+    _id: "637800bda9666656f1a58cb3",
+    name: "Test User4",
+    email: "abc4@gmail.com",
     coin: 105,
     __v: 0,
   },
@@ -135,7 +135,7 @@ const checkBalance = {
             id: {
               type: "String",
               description: "User Id",
-              example: "637514af647b9e44cc57d5f9",
+              example: "63780073a9666656f1a58ca8",
             },
           },
         },
@@ -189,12 +189,12 @@ const transferAmount = {
             from: {
               type: "String",
               description: "Id of the Sender",
-              example: "637637b117851ede0717de9c",
+              example: "637800b4a9666656f1a58cb0",
             },
             to: {
               type: "String",
               description: "Id of the receiver",
-              example: "6376383e5bf74edd4d570a8f",
+              example: "637800bda9666656f1a58cb3",
             },
             amount: {
               type: "Number",
